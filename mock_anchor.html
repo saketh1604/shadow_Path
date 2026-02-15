@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Public Anchor Site - Product Review</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f4f4f4; padding: 20px; }
+        .container { max-width: 800px; margin: 0 auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        h1 { color: #333; }
+        .product { border-bottom: 1px solid #eee; padding-bottom: 20px; margin-bottom: 20px; }
+        .comment-section { margin-top: 20px; }
+        .comment { background: #f9f9f9; padding: 15px; margin-bottom: 10px; border-left: 4px solid #007bff; cursor: pointer; transition: background 0.2s; }
+        .comment:hover { background: #e9e9e9; }
+        .author { font-weight: bold; color: #555; display: block; margin-bottom: 5px; }
+        .timestamp { font-size: 0.8em; color: #999; }
+        
+        /* This class would theoretically exist on the real site, or we look for it */
+        .comment-body { color: #222; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="product">
+        <h1>SuperTech 4K Monitor - Customer Reviews</h1>
+        <p>Rated 4.5/5 Stars. The best clarity for your coding needs.</p>
+    </div>
+
+    <div class="comment-section">
+        <h3>User Comments</h3>
+        
+        <div class="comment">
+            <span class="author">Alice M.</span>
+            <span class="timestamp">2 hours ago</span>
+            <p class="comment-body">Great monitor for the price! Colors are vivid.</p>
+        </div>
+
+        <div class="comment shadow-trigger"> <!-- We add a class for easy selection in this demo, but detection could be dynamic -->
+            <span class="author">Saketh R.</span>
+            <span class="timestamp">5 hours ago</span>
+            <p class="comment-body">The pixel density is exactly what I needed for my workflow. Highly recommended.</p>
+        </div>
+
+        <div class="comment">
+            <span class="author">John D.</span>
+            <span class="timestamp">1 day ago</span>
+            <p class="comment-body">Stand is a bit wobbly but the panel is top notch.</p>
+        </div>
+    </div>
+
+    <hr>
+    <p style="color: #666; font-size: 0.9em;">
+        <strong>Instructions for Shadow-Path Demo:</strong><br>
+        1. Run <code>python obfuscator.py --url "https://news.ycombinator.com" --trigger "The pixel density is exactly what I needed for my workflow. Highly recommended." --selector ".shadow-trigger .comment-body"</code><br>
+        2. Copy the content of the generated <code>shadow_bookmarklet.js</code>.<br>
+        3. Paste it into the Chrome DevTools Console (F12) while on this page.<br>
+        4. Click the comment by <strong>Saketh R.</strong>.<br>
+    </p>
+</div>
+
+</body>
+</html>
