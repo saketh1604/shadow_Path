@@ -45,15 +45,4 @@ Open the `mock_anchor.html` file in your browser:
 - **Zero-Dependency Crypto**: The implementation uses a custom Python-to-JS bridge. Python uses `hmac` + `hashlib` to implement a `CTR` stream cipher. JavaScript uses the standard `Web Crypto API` to decrypt it.
 - **Steganography**: The decryption key is derived *only* from the text content of the trigger element. If the text changes even by one character, decryption will fail.
 
-## Version Control (GitHub)
-> [!NOTE]
-> Since the current environment lacks `git` installed, please upload manually.
 
-1.  Create a new repository on GitHub.
-2.  Upload the following files:
-    - `obfuscator.py`
-    - `verify_integrity.py`
-    - `.gitignore`
-    - `requirements.txt` (optional, for future use)
-    - `mock_anchor.html` (for demo)
-    - `README.md` (You can save this walkthrough as README.md)
